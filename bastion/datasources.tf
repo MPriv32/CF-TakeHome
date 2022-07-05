@@ -1,4 +1,4 @@
-#Pulls the most current 
+#Pulls the most current AMI
 data "aws_ami" "AL2_ami" {
   most_recent = true
   owners      = ["137112412989"]

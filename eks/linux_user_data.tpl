@@ -9,10 +9,10 @@ set -ex
 /etc/eks/bootstrap.sh ${cluster_name} \
   --container-runtime containerd
 
-sudo su
 yum update -y
-yum install httpd -y
-service httpd start
+yum install -y httpd.x86_64
+systemctl start httpd.service
+systemctl enable httpd.service
 
 --==MYBOUNDARY==--
 
